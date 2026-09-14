@@ -1,0 +1,23 @@
+# Core Web Framework & Server
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+pydantic>=2.6.0
+pydantic-settings>=2.2.0
+python-dotenv>=1.0.0
+aiofiles>=23.2.1
+requests>=2.31.0
+httpx>=0.27.0
+
+# Google AI & GenAI SDK
+google-genai>=0.1.1
+google-generativeai>=0.8.0
+
+# Voiceover & Audio Engine
+edge-tts>=6.1.10
+
+# Visuals & Video Processing
+pillow>=10.2.0
+numpy>=1.26.0
+
+# Optional Browser Automation (for TikTok session upload if desired)
+playwright>=1.42.0

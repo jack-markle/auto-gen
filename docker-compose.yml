@@ -1,0 +1,20 @@
+services:
+  auto-post:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: autopost-ai-studio
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      # Persist generated videos on the host machine
+      - ./output:/app/output
+      # Optional: live reload code modifications without rebuilding
+      - ./src:/app/src
+      - ./config:/app/config
+    environment:
+      - APP_HOST=0.0.0.0
+      - APP_PORT=8000
